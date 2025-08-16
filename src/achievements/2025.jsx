@@ -43,12 +43,20 @@ const achievements = [
   },
 
         {
-    title: "Honored on Thanksgiving Day",
-    image: "/images/thank day.jpeg",
+    title: "Prize in an economic competition",
+    image: "/images/econ.jpeg",
     description_en:"Another success not in my field. My team and I participated in an economics competition at school. My role was to create a detailed feasibility study for the project, which took second place at the school level.",
     description_ar:"نجاحٌ آخر ليس في مجالي. شاركتُ أنا وفريقي في مسابقةٍ اقتصاديةٍ مدرسية. كان دوري إعداد دراسة جدوى مفصلة للمشروع، الذي حصد المركز الثاني على مستوى المدرسة."
 
   },
+          {
+    title: "Honored on Thanksgiving Day",
+    image:"/images/thank day.jpeg",
+    description_en:"Every year my school holds a day called Thanksgiving Day and I was honored to be honored for my hard work throughout the year.",
+    description_ar:"تحتفل مدرستي كل عام بيوم يسمى يوم الشكر، وقد تشرفت بالحصول على هذا التكريم لعملي الجاد طوال العام."
+
+  },
+
           {
     title: "Innovative youth camp",
     image: "/images/camp.jpeg",

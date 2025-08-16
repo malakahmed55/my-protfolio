@@ -23,11 +23,11 @@ function Home() {
   const projects = [
     { image: "/images/1.jpeg", link: "https://utopiaworld.site/", title: "Utopia World  موقع شامل لاصحاب متلازمة داون" },
     { image: "/images/2.jpeg", link: "https://down-up.utopiaworld.site/", title: "Down Up  موقع تعليمي لاطفال الاعاقات" },
-    { image: "/images/3.PNG", link: "http://localhost/full%20stack/", title: "dern support   موقع لشركة تصليح اجهزة الحاسوب" },
-    { image: "/images/4.PNG", link: "http://localhost/malak%20ahmed2-4/test1.php", title: " موقع بسيط لاهم العادات الدينية" },
-    { image: "/images/5.PNG", link: "http://localhost/malak%20ahmed%20task2/home.php", title: "موقع مسابقات في مواد علمية" },
-    { image: "/images/6.PNG", link: "http://localhost/PHP1/index.php", title: " موقع تسجيل بيانات العمال " },
-    { image: "/images/7.PNG", link: "http://localhost:3001/", title: "fake store   موقع لعرض منتجات مزيفه" },
+    { image: "/images/3.PNG", link: "https://github.com/malakahmed55/dern-sport", title: "dern support   موقع لشركة تصليح اجهزة الحاسوب" },
+    { image: "/images/4.PNG", link: "https://github.com/malakahmed55/3adat2", title: " موقع بسيط لاهم العادات الدينية" },
+    { image: "/images/5.PNG", link: "https://github.com/malakahmed55/3adat", title: "موقع مسابقات في مواد علمية" },
+    { image: "/images/6.PNG", link: "https://github.com/malakahmed55/add-people", title: " موقع تسجيل بيانات العمال " },
+    { image: "/images/7.PNG", link: "https://fake-store-five-sable.vercel.app/", title: "fake store   موقع لعرض منتجات مزيفه" },
   ];
 
   return (

@@ -12,14 +12,16 @@
   align-items: center;
   gap: 20px;
   transition: all 0.3s ease;
+  flex-wrap: wrap; /* عشان العناصر ما تكسرش */
 }
 
 .achievement-image {
-  width: 400px; /* حجم كبير موحد */
+  width: 400px;
   height: 300px;
   object-fit: cover;
   border-radius: 10px;
   transition: transform 0.3s ease;
+  flex-shrink: 0;
 }
 
 .achievement-row:hover .achievement-image {
@@ -27,22 +29,43 @@
 }
 
 .achievement-description {
+  flex: 1; /* ياخد المساحة الباقية */
   max-width: 600px;
-      background-color: #E8988A;
+  background-color: #E8988A;
   padding: 15px 20px;
   border-radius: 10px;
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
-  animation: slideIn 0.3s ease forwards;
-  opacity: 0;
 }
 
 @keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
   to {
     opacity: 1;
     transform: translateX(0);
   }
-  from {
-    opacity: 0;
-    transform: translateX(-10px);
+}
+
+.achievement-row:hover .achievement-description {
+  animation: slideIn 0.3s ease forwards;
+}
+
+/* 📱 ريسبونسيف لموبايل */
+@media (max-width: 768px) {
+  .achievement-row {
+    flex-direction: column; /* الصورة فوق والوصف تحت */
+    align-items: center;
+    text-align: center;
+  }
+
+  .achievement-image {
+    width: 100%;   /* تاخد عرض الشاشة */
+    height: auto;  /* تحافظ على النسبة */
+  }
+
+  .achievement-description {
+    max-width: 100%;
   }
 }

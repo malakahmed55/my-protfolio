@@ -1,10 +1,12 @@
 body {
     background-color: #f17baa;
+    margin: 0;
+    padding: 0;
 }
 
 .home-container {
     text-align: center;
-    padding: 30px;
+    padding: 30px 15px;
     font-family: Arial, sans-serif;
 }
 
@@ -30,14 +32,12 @@ body {
     font-size: 2rem;
     margin-bottom: 5px;
     font-family: 'Kaushan Script', cursive;
-
 }
 
 .home-subtitle {
     font-size: 1.2rem;
     color: rgb(66, 66, 66);
     font-family: 'Kaushan Script', cursive;
-
 }
 
 .home-description {
@@ -46,7 +46,6 @@ body {
     font-size: 1rem;
     color: #353535;
     font-family: 'Kaushan Script', cursive;
-
 }
 
 /* Two Column Layout */
@@ -55,19 +54,19 @@ body {
     justify-content: space-between;
     margin-top: 40px;
     flex-wrap: wrap;
+    gap: 30px;
 }
 
 /* Skills Section */
 .skills-section {
     flex: 1;
-    min-width: 300px;
+    min-width: 280px;
 }
 
 .skills-title {
     font-size: 1.5rem;
     margin-bottom: 20px;
     font-family: 'Kaushan Script', cursive;
-
 }
 
 .skill-item {
@@ -75,12 +74,11 @@ body {
     align-items: center;
     margin-bottom: 15px;
     font-family: 'Kaushan Script', cursive;
-
+    justify-content: center;
 }
 
 .skill-circle {
-        width: 120px;
-    /* نفس حجم دائرة السكيلز */
+    width: 120px;
     height: 120px;
     background-color: #E8988A;
     color: white;
@@ -91,21 +89,18 @@ body {
     justify-content: center;
     font-size: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-image 0.3s ease, color 0.3s ease;
     background-size: cover;
     background-position: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-
 }
 
 /* Achievements Section */
 .achievements-section {
     flex: 1;
-    min-width: 300px;
+    min-width: 280px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    /* عشان تيجي على الشمال */
 }
 
 .achievement-item {
@@ -113,12 +108,10 @@ body {
     align-items: center;
     margin-bottom: 20px;
     font-family: 'Kaushan Script', cursive;
-
 }
 
 .achievement-circle {
     width: 120px;
-    /* نفس حجم دائرة السكيلز */
     height: 120px;
     background-color: #E8988A;
     color: white;
@@ -129,43 +122,32 @@ body {
     justify-content: center;
     font-size: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-image 0.3s ease, color 0.3s ease;
     background-size: cover;
     background-position: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-
 }
 
-/* صور لكل سنة */
+/* صور Hover */
 .achievement-circle.year-2023:hover {
     background-image: url("./images/2023.jpeg");
-    background-size: cover;
-    background-position: center;
     color: transparent;
 }
 
 .achievement-circle.year-2024:hover {
     background-image: url("./images/2024.jpeg");
-    background-size: cover;
-    background-position: center;
     color: transparent;
 }
 
 .achievement-circle.year-2025:hover {
     background-image: url("./images/2025.jpeg");
-    background-size: cover;
-    background-position: center;
     color: transparent;
 }
-
-
 
 .achievement-description {
     margin-left: 15px;
     font-size: 1rem;
     color: #333;
     font-family: 'Kaushan Script', cursive;
-
 }
 
 .achievement-link {
@@ -191,25 +173,25 @@ body {
 }
 
 .project-card {
-      position: relative;
-  display: block;
-  width: 180px;
-  height: 120px;
-  overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-  cursor: pointer;
-  transition: box-shadow 0.3s ease;
-
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: 220px;
+    height: 140px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: opacity 0.4s ease;
-
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
 }
 
 .project-card:hover {
@@ -222,13 +204,9 @@ body {
 }
 
 .project-overlay {
-position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    position: absolute;
+    inset: 0;
     background-color: #E8988A;
-
     color: white;
     display: flex;
     align-items: center;
@@ -239,12 +217,54 @@ position: absolute;
     transition: opacity 0.4s ease;
     border-radius: 12px;
     text-align: center;
-    padding: 10px;}
-
-.project-card:hover .project-overlay {
-  opacity: 1;
+    padding: 10px;
 }
 
-.project-card:hover {
-  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+/* 📱 ريسبونسيف */
+@media (max-width: 768px) {
+    .two-columns {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .achievement-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .achievement-description {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr 1fr; /* عمودين بس */
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-grid {
+        grid-template-columns: 1fr; /* عمود واحد في الموبايل */
+    }
+
+    .home-title {
+        font-size: 1.5rem;
+    }
+
+    .home-subtitle {
+        font-size: 1rem;
+    }
+
+    .skill-circle, 
+    .achievement-circle {
+        width: 100px;
+        height: 100px;
+        font-size: 0.9rem;
+    }
 }
